@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Manrope, DM_Serif_Display } from "next/font/google";
+import { Roboto, DM_Serif_Display } from "next/font/google";
 import "./globals.css";
 
-const manrope = Manrope({
+const roboto = Roboto({
   subsets: ["latin"],
+  weight: ["400", "500", "700"],
   variable: "--font-sans",
 });
 
@@ -26,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${manrope.variable} ${dmSerif.variable}`}>{children}</body>
+      <body className={`${roboto.variable} ${dmSerif.variable}`}>{children}</body>
     </html>
   );
 }
